@@ -1,0 +1,5 @@
+{
+  "name": "Dashboard Admin",
+  "description": "Sebuah dasbor interaktif untuk mengelola dan memvisualisasikan data keuangan mitra, termasuk transaksi, klien, dan pengguna.",
+  "requestFramePermissions": []
+}
