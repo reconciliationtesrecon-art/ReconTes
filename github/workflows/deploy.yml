@@ -2,33 +2,28 @@ name: Deploy Vite React app to GitHub Pages
 
 on:
   push:
-    branches: [main]     # otomatis jalan tiap ada push ke main
-  workflow_dispatch:     # bisa juga dijalankan manual lewat tab Actions
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Setup Node.js (tanpa cache biar gak error lock file)
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # 3. Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # 4. Build project
       - name: Build Vite project
         run: npm run build
 
-      # 5. Deploy ke GitHub Pages (branch gh-pages)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
