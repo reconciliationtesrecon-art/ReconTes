@@ -2,8 +2,8 @@ name: Deploy Vite React app to GitHub Pages
 
 on:
   push:
-    branches: [main]   # otomatis tiap push ke main
-  workflow_dispatch:    # bisa manual dari tab Actions
+    branches: [dist]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -17,12 +17,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: npm
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build Vite app
+      - name: Build Vite project
         run: npm run build
 
       - name: Deploy to GitHub Pages
