@@ -5,6 +5,9 @@ on:
     branches: [main]   # otomatis jalan tiap ada push ke main
   workflow_dispatch:    # bisa dijalankan manual dari tab Actions
 
+permissions:
+  contents: write       # biar bisa push ke gh-pages
+
 jobs:
   build:
     runs-on: ubuntu-latest
