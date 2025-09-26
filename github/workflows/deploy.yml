@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Vite project
+      - name: Build Vite app
         run: npm run build
 
       - name: Deploy to GitHub Pages
