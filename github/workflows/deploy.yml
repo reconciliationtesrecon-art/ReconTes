@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Setup Node.js (tanpa cache lock file biar gak error)
+      # 2. Setup Node.js (tanpa cache biar gak error lock file)
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -28,7 +28,7 @@ jobs:
       - name: Build Vite project
         run: npm run build
 
-      # 5. Deploy ke gh-pages branch
+      # 5. Deploy ke GitHub Pages (branch gh-pages)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
