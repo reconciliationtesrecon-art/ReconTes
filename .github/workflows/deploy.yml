@@ -2,7 +2,7 @@ name: Deploy Vite React app to GitHub Pages
 
 on:
   push:
-    branches: [main]   # otomatis jalan tiap ada push ke main
+    branches: [main]   # jalan otomatis setiap ada push ke main
   workflow_dispatch:    # bisa dijalankan manual dari tab Actions
 
 permissions:
